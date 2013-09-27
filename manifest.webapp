@@ -1,0 +1,18 @@
+{
+"name": "Quick Note",
+  
+	"description": "A simple note taking app",
+  
+	"launch_path": "quicknotes/index.html",
+  
+	"icons": {
+    "128": "/img/icon-128.png"
+  },
+  	"developer": {
+    "name": "Vicky Junior - Vital Creations",
+    
+	"url": "http://vital-creations.com"
+  },
+  
+	"default_locale": "en"
+	}

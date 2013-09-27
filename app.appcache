@@ -1,0 +1,23 @@
+CACHE MANIFEST
+# 2013-01-18:v2
+
+# Explicitly cached entries
+index.html
+css/jquery.mobile-1.3.0.min.css
+css/style.css
+js/jquery-1.9.1.min.js
+js/app.js
+js/jquery.mobile-1.3.0.min.js
+
+# offline.html will be displayed if the user is offline
+FALLBACK:
+/ /offline.html
+
+# All other resources (e.g. sites) require the user to be online. 
+NETWORK:
+*
+
+# Additional resources to cache
+CACHE:
+img/icon-128.png
+ 

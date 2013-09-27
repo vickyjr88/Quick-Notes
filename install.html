@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1"> 
+<title>Instal the elections app</title>
+<script language="javascript" type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript">
+ $( document ).ready(function() {
+$('.install').click( function(){
+//var manifestUrl = "http://elections.vital-creations.com/manifest.webapp";
+//console.log(manifestUrl);
+//var manifestURL = location.href.substring(0, location.href.lastIndexOf("/")) + "/package.webapp";
+var manifestURL = location.href.substring(0, location.href.lastIndexOf("/")) + "/package.webapp";
+console.log(location.href.substring(0, location.href.lastIndexOf("/")) + "/package.webapp");
+var installApp = navigator.mozApps.installPackage(manifestURL);
+//var request = window.navigator.mozApps.install(manifestUrl);
+request.onsuccess = function () {
+  // Save the App object that is returned
+  var appRecord = this.result;
+  alert('Installation successful!');
+};
+request.onerror = function () {
+  // Display the error information from the DOMError object
+  alert('Install failed, error: ' + this.error.name);
+};
+});
+ });
+</script>
+<style type="text/css">
+body{
+	margin:0;
+	padding:0;
+	font-family:Verdana, Geneva, sans-serif;
+	height:600px;
+	}
+	
+#wrapper{
+	margin:auto;
+	width:200px;
+	height:300px;
+	padding:200px 0;
+	}
+	
+.install{
+	color:white;
+	text-decoration:none;
+	font-weight:bold;
+	padding:15px;
+	font-size:18px;
+	background: #0087c9;
+background: -moz-linear-gradient(top,  #0087c9 0%, #7db9e8 100%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#0087c9), color-stop(100%,#7db9e8));
+background: -webkit-linear-gradient(top,  #0087c9 0%,#7db9e8 100%);
+background: -o-linear-gradient(top,  #0087c9 0%,#7db9e8 100%);
+background: -ms-linear-gradient(top,  #0087c9 0%,#7db9e8 100%);
+background: linear-gradient(to bottom,  #0087c9 0%,#7db9e8 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0087c9', endColorstr='#7db9e8',GradientType=0 );
+-webkit-border-radius: 10px;
+-moz-border-radius: 10px;
+border-radius: 10px;
+	}
+</style>
+</head>
+
+<body>
+<div id="wrapper"><a href="#" class="install">INSTALL</a></div>
+</body>
+</html>

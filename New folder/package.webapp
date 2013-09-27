@@ -1,0 +1,9 @@
+{
+    "name": "My sample app",
+    "package_path" : "localhost/quicknote/css.zip",
+    "version": "1",
+    "developer": {
+        "name": "Chris Mills",
+        "url": "http://my-server.com"
+    }
+}
